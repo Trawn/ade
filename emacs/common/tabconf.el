@@ -1,4 +1,5 @@
 ;;; tabbar
+(add-to-list 'load-path (expand-file-name "lisp/" myconfpath))
 (require 'tabbar)
 (tabbar-mode)
 

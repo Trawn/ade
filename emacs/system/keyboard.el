@@ -49,4 +49,4 @@
 
 (global-set-key (kbd "C-. d") 'delete-region)
 
-(mapc 'load (directory-files "emacs/system/kbd/" t "\\.el$"))
+(mapc 'load (directory-files (expand-file-name "system/kbd/" myconfpath) t "\\.el$"))

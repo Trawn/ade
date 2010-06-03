@@ -1,4 +1,6 @@
-(setq load-path (append load-path '("emacs/lisp/pymacs") '("emacs/lisp/python-mode")))
+;(setq load-path (append load-path '("emacs/lisp/pymacs") '("emacs/lisp/python-mode")))
+(add-to-list 'load-path (expand-file-name "lisp/pymacs/" myconfpath))
+(add-to-list 'load-path (expand-file-name "lisp/python-mode/" myconfpath))
 (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
 (setq interpreter-mode-alist (cons '("python" . python-mode)
                                    interpreter-mode-alist))

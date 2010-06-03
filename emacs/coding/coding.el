@@ -56,7 +56,7 @@
 	  "%n.sh")))
 
 
-(mapc 'load (directory-files "emacs/coding/c~cpp/" t "\\.el$"))
+(mapc 'load (directory-files (expand-file-name "coding/c~cpp/" myconfpath) t "\\.el$"))
 ;(mapc 'load (directory-files "coding/perl/" t "\\.el$"))
 
 (setq lazy-lock-defer-on-scrolling t)

@@ -42,7 +42,7 @@
     (progn
       (if (frame-parameter nil 'font-backend)
        	  (progn
- 	    (set-default-font "Yahei Mono-16")
+ 	    (set-default-font "Yahei Mono-14")
       	    (set-fontset-font (frame-parameter nil 'font)
       			      'han '("Yahei Mono" . "unicode-bmp"))
       	    (set-fontset-font (frame-parameter nil 'font)
@@ -61,7 +61,7 @@
 					;for comment face
        '(font-lock-comment-face ((t (:italic t :foreground "RosyBrown3" :slant oblique :height 0.9))))
        '(font-lock-function-name-face ((t (:bold t :foreground "DarkSeaGreen2"))))
-    ;   '(mode-line ((t (:bold t :foreground "yellow" :background "MidnightBlue"))))
+       '(mode-line ((t (:bold t :foreground "yellow" :background "MidnightBlue"))))
        )
       )
   )
