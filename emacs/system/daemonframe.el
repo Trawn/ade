@@ -4,7 +4,7 @@
       (progn
 	(defun frame-setting(&optional frame)
 	  (tool-bar-mode -1)
-	  (menu-bar-mode -1)
+;	  (menu-bar-mode -1)
 	  (interactive)
 	  (select-frame frame)
 	  (set-default-font "Yahei Mono-14")
