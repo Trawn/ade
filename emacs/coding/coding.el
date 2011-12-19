@@ -57,6 +57,12 @@
 
 
 (mapc 'load (directory-files (expand-file-name "coding/c~cpp/" myconfpath) t "\\.el$"))
+(add-to-list 'load-path (expand-file-name "coding/golang/" myconfpath))
+(require 'auto-complete)
+(require 'auto-complete-config)
+(require 'go-autocomplete)
+
+
 ;(mapc 'load (directory-files "coding/perl/" t "\\.el$"))
 
 (setq lazy-lock-defer-on-scrolling t)

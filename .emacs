@@ -1,7 +1,7 @@
 ;;rewrite
 (server-start)
 ;(message "%s" 'system-type)
-
+(mapc 'load (directory-files (expand-file-name "lisp/" myconfpath) t "\\.el$"))
 (mapc 'load (directory-files (expand-file-name "system/" myconfpath) t "\\.el$"))
 (mapc 'load (directory-files (expand-file-name "common/" myconfpath) t "\\.el$"))
 (mapc 'load (directory-files (expand-file-name "coding/" myconfpath) t "\\.el$"))
