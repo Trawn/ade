@@ -68,6 +68,5 @@
 	   '(minibuffer-prompt
 		 ((t (:bold t :foreground "LightPink" :background "DarkGreen")))
 		 )
-	   )
       )
   )

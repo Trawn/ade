@@ -37,3 +37,11 @@
 ;any other value - in place of the current buffer."
 ;...)                                                              [19:38]
 ;)
+(defun corkscrew-open-network-stream (name buffer host service)
+  "Opens a network stream via corkscrew"
+  (open-network-stream name buffer host service
+					   :type 'shell
+					   :shell-command "corkscrew proxy.jpto.sonyericsson.net 8080 %s %p"))
+
+(let ((erc-server-connect-function open-network-stream))
+  (erc :server "irc.freenode.net"))

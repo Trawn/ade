@@ -59,8 +59,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;;去除Menu和Tool
-(setq menu-bar-mode -1)
-(setq tool-bar-mode -1)
+(setq menu-bar-mode nil)
+(setq tool-bar-mode nil)
 
 ;;给出用 M-x foo-bar-COMMAND 输入命令的提示。
 (icomplete-mode t)
@@ -96,6 +96,7 @@
       (lambda ()
         (y-or-n-p "Do you really want to quit? ")))
 
+(setq default-tab-width 4)
 (setq tab-width 4)
 (auto-save-mode -1)
 (setq auto-save-default nil)
@@ -106,3 +107,11 @@
 (custom-set-variables
  '(mouse-wheel-mode t nil (mwheel))
  '(revert-without-query (quote (".*"))))
+
+
+(defun jump-at-line-begining()
+  (interactive "")
+  (if (bolp) (back-to-indentation) (beginning-of-line)))
+(global-set-key (kbd "C-A") 'jump-at-line-begining)
+
+(require 'tramp)

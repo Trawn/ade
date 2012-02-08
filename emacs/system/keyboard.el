@@ -41,12 +41,12 @@
 (global-set-key (kbd "C-. g") 'goto-line)
 
 ;;compile current directory project
-(global-set-key (kbd "C-. k") 'comment-region)
-(global-set-key (kbd "C-. u") 'uncomment-region)
-(global-set-key (kbd "C-. c") 'compile)
-(global-set-key (kbd "C-. n") 'next-error)
-(global-set-key (kbd "C-. m") 'previous-error)
+(global-set-key (kbd "C-, k") 'comment-region)
+(global-set-key (kbd "C-, u") 'uncomment-region)
+(global-set-key (kbd "C-, c") 'compile)
+(global-set-key (kbd "C-, n") 'next-error)
+(global-set-key (kbd "C-, m") 'previous-error)
 
-(global-set-key (kbd "C-. d") 'delete-region)
+(global-set-key (kbd "C-, d") 'delete-region)
 
 (mapc 'load (directory-files (expand-file-name "system/kbd/" myconfpath) t "\\.el$"))
